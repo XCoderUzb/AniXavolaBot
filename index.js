@@ -49,7 +49,7 @@ bot.on('text', async (ctx) => {
         const imageUrls = new Set();
 
         $('img').each((_, element) => {
-            const imgSrc = $(element).attr('src') || $(element).attr('data-src') \vert{}\vert{}$(element).attr('data-lazy-src');
+            const imgSrc = $(element).attr('src') || $(element).attr('data-src') || $(element).attr('data-lazy-src');
             if (imgSrc) {
                 try {
                     const fullUrl = new URL(imgSrc, urlText).href;
